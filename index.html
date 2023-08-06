@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-elem1">
+            <div class="transactions_descr_centr">
+                Процент выполнения <br> ключевых показателей <br>  эффективности
+            </div>
+            <canvas id="myChart"></canvas>
+            <button id="button" class="city_btn">
+                <span>Общий график по всем городам</span>
+            </button>
+            <div class="transactions_descr_centr">
+                Выполнение плана продаж <br>(по заключенным ДКП)
+            </div>
+        </div>
+
+        <div class="grid-elem">
+            <div class="descr">Акцепт КП</div>
+            <div class="transactions_descr" id="transactions">
+                4 сделки <span id="transactionAmount">0р.</span>
+            </div>
+        </div>
+
+        <div class="grid-elem">
+            <div class="descr">Подготовка КК</div>
+            <div class="transactions_descr">4 сделки     5 379 348р.</div>
+        </div>
+
+        <div class="grid-elem">
+            <div class="descr">КК проведен</div>
+            <div class="transactions_descr">4 сделки     5 379 348р.</div>
+        </div>
+
+        <div class="grid-elem">
+            <div class="descr">Одобрено</div>
+            <div class="transactions_descr">4 сделки     5 379 348р.</div>
+        </div>
+
+        <div class="grid-elem">
+            <div class="descr">Передано в сопровождение</div>
+            <div class="transactions_descr">4 сделки     5 379 348р.</div>
+        </div>
+
+        <div class="grid-elem7">
+            <div class="container_best_region">
+                <div class="transactions_descr_best">Лучший региональный офис продаж</div>
+                <div class="transactions_descr_city1">
+                    <div class="city_1">Екатеринбург</div>  
+                    <div class="cyti_1_money">337 998</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <img src="icons/1.png" alt="first" class="number1min">
+                </div>
+
+                <div class="transactions_descr_city1">
+                    <div class="city_2">Москва</div>
+                    <div class="cyti_1_money">49 428</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <img src="icons/2.png" alt="second" class="number1min">
+                </div>
+
+                <div class="transactions_descr_city1">
+                    <div class="city_3">Новосибирск</div>
+                    <div class="cyti_1_money">49 428</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <img src="icons/3.png" alt="third" class="number1min">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-elem8">
+            <div class="transactions_descr">Лидеры личных продаж</div>
+            <div class="transactions_descr">Хурназиди Роман     5 379 348р.</div>
+            <div class="transactions_descr">Рыжий Анатолий     5 379 348р.</div>
+            <div class="transactions_descr">Яковлева Анастасия     5 379 348р.</div>
+        </div>
+
+        <div class="grid-elem9">
+            <div class="container_best">
+                <div class="transactions_descr_best">Лучшая сделка</div>
+                <img src="/icons/Рыжий Анатолий2.png" alt="best-deal" class="number1_name">
+                <div class="transactions_descr_bestname">Рыжий Анатолий</div>
+                <div class="transactions_descr_bestdate">12.06.2023 <span>Москва</span></div>
+                <div class="transactions_descr_bestamount">192 000</div>
+                <div class="transactions_descr_bestamount_currency">тыс. руб.</div>
+                <img src="/icons/1big.png" alt="first" class="number1">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
