@@ -4,6 +4,54 @@
     margin: 0;
     padding: 0;
 }
+html {
+    font-family: 'Roboto!';
+}
+
+@font-face {
+    font-family: 'Roboto!';
+    src: url('../fonts/Roboto-Thin.eot');
+    src: url('../fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Thin.woff') format('woff'),
+    url('../fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Roboto!';
+    src: url('../fonts/Roboto-Light.eot');
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Light.woff') format('woff'),
+    url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    }    
+
+@font-face {
+    font-family: 'Roboto!';
+    src: url('Roboto-Regular.eot');
+    src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Roboto-Regular.woff') format('woff'),
+    url('Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Roboto!';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    }
+
+/* h1 {
+    100\200 300 400 500 
+    font-family: 'Roboto_Thin';
+} */
 
 /* Стили для сетки контейнера */
 .grid-container {
@@ -64,7 +112,6 @@
 /* --------------------------------------1--------------------------------------------------------------------------- */
 .grid-elem .transactions_descr_centr_percent{
     margin: 32px 27px 24px 27px;
-    font-family: Roboto;
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
@@ -75,7 +122,6 @@
 }
 .transactions_descr_centr{
     margin: 32px 27px 24px 27px;
-    font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
@@ -113,7 +159,6 @@
     border: 1px;
     background:rgba(246, 248, 251, 1);
     border: 1px solid rgba(200, 210, 220, 1);
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -128,7 +173,6 @@
     border: 1px;
     background:rgba(246, 248, 251, 1);
     border: 1px solid rgba(200, 210, 220, 1);
-    font-family: 'Roboto';
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
@@ -170,7 +214,6 @@ hr{
   
   .item-label1 {
     padding: 0 0 10px 0; 
-    font-family: 'Roboto';
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
@@ -180,7 +223,6 @@ hr{
   
   .item-amount1 {
     padding: 0 0 10 0px;
-    font-family: 'Roboto';
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
@@ -201,7 +243,6 @@ hr{
   .budget-item2 .item-label2 {
     padding: 0 0 10px 25px;
     text-align: left;
-    font-family: 'Roboto';
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
@@ -212,7 +253,6 @@ hr{
   .budget-item2 .item-amount2 {
     padding: 0 0 10px 20px;
     text-align: left;
-    font-family: 'Roboto';
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
@@ -243,7 +283,6 @@ hr{
  .grid-elem4 .descr,
  .grid-elem5 .descr{ 
     margin: 21px 16px  10px 16px;
-    font-family: 'Roboto';
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
@@ -264,7 +303,6 @@ hr{
     align-items: center;
     column-gap: 10px;
     margin: 0px 10px 10px 16px;
-    font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
@@ -337,7 +375,6 @@ hr{
 }
 .cyti_1_money {
     margin-right: 16px;
-    font-family: 'Roboto';
     font-weight: 500;
     color: rgba(4, 40, 76, 1);
     font-size: 24px;
@@ -413,7 +450,6 @@ hr{
  .title_transactions_descr_people{
     margin: 24px 24px 10px 24px;
     color: rgba(4, 40, 76, 1);
-    font-family: 'Roboto';
     font-size: 24px;
     font-weight: 500;
     line-height: 28.13px;
@@ -453,7 +489,6 @@ hr{
 .transactions_descr_name1,
 .transactions_descr_name2,
 .transactions_descr_name3 {
-    font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
@@ -467,7 +502,6 @@ hr{
 .transactions_descr_date2,
 .transactions_descr_date3
 {
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
@@ -482,7 +516,6 @@ hr{
 
 
 .transactions_descr_money{
-    font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
@@ -516,7 +549,6 @@ hr{
 .titul_transactions_descr_best {
     margin: 24px 24px 73px 24px;
     color: rgba(4, 40, 76, 1);
-    font-family: 'Roboto';
     font-size: 24px;
     font-weight: 500;
     line-height: 28.13px;
@@ -526,7 +558,6 @@ hr{
 /* Стили для названия лучшего региона */
 .container_best .transactions_descr_bestname {
     padding: 0 0 4px 0;
-    font-family: 'Roboto';
     font-weight: 500;
     color: rgba(4, 40, 76, 1);
     font-size: 20px;
@@ -574,4 +605,52 @@ hr{
     line-height: 16.41px;
 }
 /* --------------------------------------------------4---------------------------------------------------- */
+.transactions_descr  {
+    text-align: left;
+    font-weight: 500;
+    color: rgba(4, 40, 76, 1);
+    font-size: 24px;
+    line-height: 23.44px;
+}
 
+.transactions_descr_best  {
+    text-align: left;
+    font-weight: 500;
+    color: rgba(4, 40, 76, 1);
+    font-size: 24px;
+    line-height: 28.13px;
+
+}
+.descr {
+    text-align: left;
+    font-weight: 400;
+    color: rgba(4, 40, 76, 1);
+    font-size: 16px;
+    line-height: 18.75px;
+}
+
+.transactions_descr_centr{
+    margin-top: 33px;
+    text-align: center;
+    font-weight: 500;
+    color: rgba(4, 40, 76, 1);
+    font-size: 24px;
+    line-height: 23.44px;
+}
+.city_btn{
+    width: 259px;
+    height: 28;
+    margin-top: 33px;
+    text-align: center;
+    font-weight: 400;
+    color: rgba(4, 40, 76, 1);
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 40px;
+    border-color: rgba(200, 210, 220, 1);
+    border: 1px;
+}
+.city_btn:hover {
+    background-color: #a0a0a0;
+    cursor: pointer; /* Изменение курсора при наведении */
+}
