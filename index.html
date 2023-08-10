@@ -5,98 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_diagram.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Контейнер для сетки с различными элементами -->
     <div class="grid-container">
-        <div class="grid-elem1">
-            <div class="transactions_descr_centr">
+        <!-- Элемент с описанием процента выполнения ключевых показателей -->
+        <div class="grid-elem">
+            <div class="transactions_descr_centr_percent">
                 Процент выполнения <br> ключевых показателей <br>  эффективности
             </div>
-            <canvas id="myChart"></canvas>
-            <button id="button" class="city_btn">
-                <span>Общий график по всем городам</span>
-            </button>
+            <!-- График для визуализации данных -->
+            <div class="canvas">
+                <svg class="chart" width="300" height="300" viewBox="0 0 50 50">
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                  <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                </svg>
+              </div>
+            <!-- Кнопка для общего графика по всем городам -->
+            <div class="all_city_btn">
+                <button id="button" class="city_btn_Ekb">
+                    <span class="dot"></span>
+                    <span>Екатеринбург 20%</span>
+                </button>
+                <button id="button" class="city_btn_Msk">
+                    <span>Москва 17%</span>
+                </button>
+                <button id="button" class="city_btn_Che">
+                    <span>Челябинск 13%</span>
+                </button>
+                <button id="button" class="city_btn_Spb">
+                    <span>Санкт-Петербург 11%</span>
+                </button>
+                <button id="button" class="city_btn_Nsk">
+                    <span>Новосибирск 9%</span>
+                </button>
+            </div>
+            <div class="plan_sale"></div>
             <div class="transactions_descr_centr">
                 Выполнение плана продаж <br>(по заключенным ДКП)
             </div>
+            <hr>
+            <div class="all_budget-item">
+                <div class="budget-item1">
+                    <span class="item-label1">План</span>
+                    <span class="item-amount1">1 500 000 000 руб.</span>
+                </div>
+                
+                <div class="budget-item2">
+                    <span class="item-label2">Факт</span>
+                    <span class="item-amount2">0 руб.</span>
+                </div>
+            </div> 
         </div>
 
-        <div class="grid-elem">
-            <div class="descr">Акцепт КП</div>
-            <div class="transactions_descr" id="transactions">
-                4 сделки <span id="transactionAmount">0р.</span>
+        <!-- Элементы для различных показателей -->
+        <div class="grid-elem1">
+            <div class="grid-elem_container">
+              <div class="descr">Акцепт <span class="kp">КП</span></div>
+              <div class="transactions_descr">
+                <div class="transaction-count">4 сделки</div>
+                <div class="transaction-amount">5 379 348р.</div>
+                <!-- <div class="transaction-currency">р.</div> -->
+              </div>
             </div>
+          </div>
+
+          <div class="grid-elem2">
+            <div class="grid-elem_container">
+              <div class="descr">Подготовка<span class="kk"> КК </span></div>
+              <div class="transactions_descr">
+                <div class="transaction-count">4 сделки</div>
+                <div class="transaction-amount">1 379 348р. </div>
+                <!-- <div class="transaction-currency">р.</div> -->
+              </div>
+            </div>
+          </div>
+
+        <!-- Элементы для различных показателей Подготовка КК, КК проведен, Одобрено, Передано в сопровождение -->
+        <div class="grid-elem3">
+            <div class="grid-elem_container">
+                <div class="descr"><span class="kk"> КК </span>проведен</div>
+                <div class="transactions_descr">
+                  <div class="transaction-count">4 сделки</div>
+                  <div class="transaction-amount">1 379 348р. </div>
+                  <!-- <div class="transaction-currency">р.</div> -->
+                </div>
+              </div>
         </div>
 
-        <div class="grid-elem">
-            <div class="descr">Подготовка КК</div>
-            <div class="transactions_descr">4 сделки     5 379 348р.</div>
+        <div class="grid-elem4">
+            <div class="grid-elem_container">
+                <div class="descr">Одобрено</div>
+                <div class="transactions_descr">
+                  <div class="transaction-count">4 сделки</div>
+                  <div class="transaction-amount">1 379 348р. </div>
+                  <!-- <div class="transaction-currency">р.</div> -->
+                </div>
+              </div>
         </div>
 
-        <div class="grid-elem">
-            <div class="descr">КК проведен</div>
-            <div class="transactions_descr">4 сделки     5 379 348р.</div>
-        </div>
-
-        <div class="grid-elem">
-            <div class="descr">Одобрено</div>
-            <div class="transactions_descr">4 сделки     5 379 348р.</div>
-        </div>
-
-        <div class="grid-elem">
+        <div class="grid-elem5">
             <div class="descr">Передано в сопровождение</div>
-            <div class="transactions_descr">4 сделки     5 379 348р.</div>
-        </div>
+                <div class="transactions_descr">
+                  <div class="transaction-count">4 сделки</div>
+                  <div class="transaction-amount">1 379 348р. </div>
+                  <!-- <div class="transaction-currency">р.</div> -->
+                </div>
+              </div>
+              
+        <!-- ... Другие элементы ... -->
 
-        <div class="grid-elem7">
+        <!-- Элементы для лучших региональных офисов продаж -->
+        <div class="grid-elem6">
             <div class="container_best_region">
                 <div class="transactions_descr_best">Лучший региональный офис продаж</div>
                 <div class="transactions_descr_city1">
                     <div class="city_1">Екатеринбург</div>  
                     <div class="cyti_1_money">337 998</div>
-                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
                     <img src="icons/1.png" alt="first" class="number1min">
                 </div>
 
-                <div class="transactions_descr_city1">
+                <div class="transactions_descr_city2">
                     <div class="city_2">Москва</div>
                     <div class="cyti_1_money">49 428</div>
-                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
                     <img src="icons/2.png" alt="second" class="number1min">
                 </div>
 
-                <div class="transactions_descr_city1">
+                <div class="transactions_descr_city3">
                     <div class="city_3">Новосибирск</div>
                     <div class="cyti_1_money">49 428</div>
-                    <span class="transactions_descr_bestamount_currency"> тыс руб.</span>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
                     <img src="icons/3.png" alt="third" class="number1min">
                 </div>
             </div>
         </div>
+        <!-- ... Другие элементы ... -->
 
-        <div class="grid-elem8">
-            <div class="transactions_descr">Лидеры личных продаж</div>
-            <div class="transactions_descr">Хурназиди Роман     5 379 348р.</div>
-            <div class="transactions_descr">Рыжий Анатолий     5 379 348р.</div>
-            <div class="transactions_descr">Яковлева Анастасия     5 379 348р.</div>
+        <!-- Элемент для лидеров личных продаж -->
+        <div class="grid-elem7">
+            <div class="title_transactions_descr_people">Лидеры личных продаж</div>
+            <!-- Информация о лидерах продаж -->
+            <div class="transactions_descr_people1">
+                <div class="transactions_descr_top_people">
+                    <img src="img/Хурназиди Роман.png" alt="first" class="img_people1min">
+                    <div class="transactions_descr_top_fullname">
+                        <div class="transactions_descr_name1">Хурназиди Роман</div>
+                        <div class="transactions_descr_date1">
+                            <span class="date">15.06.2023</span>
+                            <span class="location">Челябинск</span>
+                        </div>
+                    </div>
+                        <div class="transactions_descr_money">227 310</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
+                    <img src="icons/1_middle.png" alt="first" class="number_middle">   
+                </div>
+                <div class="transactions_descr_top_people2">
+                    <img src="img/Рыжий Анатолий.png" alt="first" class="img_people2min">
+                    <div class="transactions_descr_top_fullname">
+                        <div class="transactions_descr_name2">Рыжий Анатолий</div>
+                        <div class="transactions_descr_date2">                        
+                            <span class="date">12.06.2023</span>
+                            <span class="location">Москва</span>  
+                        </div>
+                    </div>
+                        <div class="transactions_descr_money">192 000</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
+                    <img src="icons/2_middle.png" alt="first" class="number_middle">   
+                </div>  
+                <div class="transactions_descr_top_people3">
+                    <img src="img/Яковлева Анастасия.png" alt="first" class="img_people3min">
+                    <div class="transactions_descr_top_fullname">
+                        <div class="transactions_descr_name3">Яковлева Анастасия</div>
+                        <div class="transactions_descr_date1">
+                            <span class="date">02.06.2023</span>
+                            <span class="location">Екатеринбург</span>  
+                        </div>
+                    </div>
+                        <div class="transactions_descr_money">68 338</div>
+                    <span class="transactions_descr_bestamount_currency"> тыс. руб.</span>
+                    <img src="icons/3_middle.png" alt="first" class="number_middle">   
+                </div>  
+                
+                
+            </div>
+            <!-- <div class="transactions_descr">Рыжий Анатолий     5 379 348р.</div>
+            <div class="transactions_descr">Яковлева Анастасия     5 379 348р.</div> -->
         </div>
+        <!-- ... Другие элементы ... -->
 
-        <div class="grid-elem9">
+        <!-- Элемент для лучшей сделки -->
+        <div class="grid-elem8">
+            <div class="titul_transactions_descr_best">Лучшая сделка</div>
             <div class="container_best">
-                <div class="transactions_descr_best">Лучшая сделка</div>
-                <img src="/icons/Рыжий Анатолий2.png" alt="best-deal" class="number1_name">
+                <!-- Информация о лучшей сделке -->
+                <img src="img/Рыжий Анатолий2.png" alt="best-deal" class="img_number1_name">
                 <div class="transactions_descr_bestname">Рыжий Анатолий</div>
                 <div class="transactions_descr_bestdate">12.06.2023 <span>Москва</span></div>
                 <div class="transactions_descr_bestamount">192 000</div>
                 <div class="transactions_descr_bestamount_currency">тыс. руб.</div>
-                <img src="/icons/1big.png" alt="first" class="number1">
+                <img src="icons/1big.png" alt="first" class="number1">
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script> 
+    <!-- Подключение внешнего JavaScript-скрипта для взаимодействия с DOM -->
+    <script src="js/script.js"></script> 
 </body>
 </html>

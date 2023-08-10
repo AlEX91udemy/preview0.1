@@ -58,17 +58,6 @@
         font-size: 24px;
         line-height: 23.44px;
     }
-   
-    .container_best, .transactions_descr_bestamount_currency {
-        margin-top: 4px;
-        color: rgba(4, 40, 76, 0.6);
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16.41px;
-        margin-bottom: 8px;
-    }
-
-    
     .city_btn{
         width: 259px;
         height: 28;
